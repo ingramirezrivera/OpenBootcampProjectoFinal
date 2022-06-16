@@ -1,0 +1,146 @@
+@use "components";
+
+@mixin section-display {
+    width: 100%;
+    max-width: 992px;
+    margin: auto;
+    padding: 3rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-bottom: 1px solid #ddd;
+}
+.logo a img{
+    max-width: 7rem;
+}
+    
+
+.sec-home {
+    display: flex;
+    align-items: center;
+    @include section-display();
+    .home-cta {
+        flex: 1;
+        .cta-text {
+            color: components.$color-main;
+        }
+        .home-title {
+            width: 20rem;
+            font-size: 3rem;
+        }
+        .home-description {
+            width: 300px;
+        }
+        .lead-magnet {
+            .input-col {
+                max-width: 200px;
+            }
+            .btn-col {
+                max-width: 200px;
+            }
+        }
+    }
+}
+.sec-features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include section-display();
+    .intro{
+        margin: 0 auto;
+        text-align: center;
+        h3{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.3rem;
+            color: #888;
+        }
+
+    }
+    .features{
+        display: flex;
+        justify-content: center;
+        grid-area: 1rem;
+        
+        .text{
+            padding: 2rem 0;;
+            flex: 1;
+            .feature{
+                display: flex;
+                gap: 2rem;
+                flex-direction: row;
+                align-items: center;
+
+                .description{
+                    margin-left: 1rem;
+                    .description-title{
+                        font-size: 1.25rem;
+                    }
+                    .description-text{
+                        font-size: 1rem;
+                        max-width: 20rem;
+
+
+                    }
+                }
+            }
+        }
+        .image{
+            display: flex;
+            align-items: center;
+            
+            img{
+                max-width: 25rem;
+            }
+        }
+    }
+}
+.sec-benefits{
+    display: flex;
+    border-top: 1px solid #ddd;
+    @extend .sec-features, .intro;
+    max-width: 1400px;
+    .benefit-cards{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+}
+.sec-kpis{
+    background-color: components.$color-main;
+    color: white;
+    .kpis{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        @extend .sec-features, .intro;
+        max-width: 1400px;
+        .kpi{
+            display: flex;
+            flex-direction: column;
+            .number{
+                font-size: 2.5rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            .desc{
+                font-size: 0.8rem;
+                text-align: center;
+            }
+        }
+    }
+        
+}

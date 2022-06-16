@@ -47,54 +47,76 @@ $color-main: #0075FF;
 }
 
 .main-menu{
+    margin-bottom: 0;
     li{
-        font-size: 0.5rem;
+        font-size: 1.75;
         list-style: none;
         display: inline;
+        margin: 1.2rem;
+
+        a{
+            text-decoration: none;
+            color: #000000;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 }
 
 .icon-sm{
     
     i{
-        font-size: 0.75rem;
+        font-size: 1rem;
+        font-weight: bold;
         width: 2rem;
         height: 2rem;
         color: $color-main;
-        padding: 0.25rem;
+        padding: 1rem;
         border-radius: 50%;
         box-shadow: 0 0 10px #00000040;
         
     }
 }
-.feature{
+.benefit{
     display: flex;
+    width: 33.33%;
     flex-direction: column;
+    gap: 1rem;
     .icon{
         color: $color-main;
-        font-size: 10rem;
+        font-size: 5rem;
         text-align: center;
 
     }
     .description{
         .title{
-            font-size: 2rem;
+            height: auto;
             text-align: center;
-
+            h3{
+                font-size: 1.5rem;
+            }
         }
         .text{
+            display: flex;
+            height: auto;
+            padding: 2rem;
             color: #888;
             text-align: center;
-
+            p{
+                font-size: 1rem;
+            }
         }
-    }
         .cta{
+            height: 6rem;
             color: $color-main;
             font-weight: 600;
-            margin-top: 3rem;
             text-align: center;
 
     }
+    }
+        
 
 }
 .icon-desc{
