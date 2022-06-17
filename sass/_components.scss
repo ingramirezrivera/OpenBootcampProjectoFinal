@@ -7,6 +7,7 @@
     padding: 0.1rem 1rem;    
 }
 $color-main: #0075FF;
+$color-footer: #F4F7FE;
 
 
 .btn-main{
@@ -122,8 +123,8 @@ $color-main: #0075FF;
 .icon-desc{
     display: flex;
     flex-direction: column;
-    .icon{
-        font-size: 10rem;
+    i {
+        font-size: 8rem;
         color: $color-main;
         padding: 0;
         text-align: center;

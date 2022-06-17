@@ -7,6 +7,10 @@
     padding: 3rem;
 }
 
+html{
+    min-width: 100vw;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -99,6 +103,7 @@ body{
         }
         .image{
             display: flex;
+            margin: auto;
             align-items: center;
             
             img{
@@ -111,7 +116,8 @@ body{
     display: flex;
     border-top: 1px solid #ddd;
     @extend .sec-features, .intro;
-    max-width: 1400px;
+    max-width: 1200px;
+    
     .benefit-cards{
         display: flex;
         flex-direction: row;
@@ -127,7 +133,7 @@ body{
         justify-content: space-around;
         flex-direction: row;
         @extend .sec-features, .intro;
-        max-width: 1400px;
+        max-width: 1200px;
         .kpi{
             display: flex;
             flex-direction: column;
@@ -143,4 +149,93 @@ body{
         }
     }
         
+}
+.sec-onbaording{
+    display: flex;
+    flex-direction: column;
+    @extend .sec-features, .intro;
+
+    .steps{
+        display: flex;
+        padding-top: 0;
+        margin-bottom: 4rem;
+        justify-content: space-around;
+        flex-direction: row;
+        @extend .sec-features, .intro;
+        max-width: 1200px;
+    }
+    .step-divider{
+        flex: 1;
+        border-top: 1 px solid #ddd;
+    }
+}
+.sec-footer-cta{
+    display: flex;
+    flex-direction: row;
+    background-color: components.$color-footer;
+    padding: 5rem;
+    background-image: url('https://drive.google.com/uc?id=1p2iR90px95cuRu3ruxMGoWHe0s0M788K');
+    background-repeat: no-repeat;
+    background-position: 100% ;
+
+    .footer-cta{
+        margin-left: 20%;
+        max-width: 500px;
+        .cta-title{
+            font-size: 2rem;
+        }
+        .cta{
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .home-cta {
+        .cta-text {
+        }
+        .home-title {
+        }
+        .home-description {
+            width: 100%;
+        }
+        .lead-magnet {
+            width: 100%;
+            flex-direction: column;
+            .input-col {
+            }
+            .btn-col {
+            }
+        }
+    }
+
+    .sec-benefits{
+                
+        .benefit-cards{
+            flex-direction: column;
+            .benefit{
+                width: 100%;
+                margin: auto;
+            }   
+        }
+    }
+    .sec-onbaording{
+        .steps{
+            flex-direction: column;
+        }
+    }
+    .sec-kpis{
+        
+        .kpis{
+            flex-direction: column;
+            gap: 3rem;
+            .kpi{
+                .number{
+                }
+                .desc{
+                }
+            }
+        }
+            
+    }
 }
